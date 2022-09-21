@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800;900&display=swap");
+
+$color-primary: #cf1e2d;
+$color-secondary: #0000aa;
+
+$white: #ffffff;
+$black: #1a1b1f;
+
+$bg-color: #f0f6f9;
+
+$font-family: "Work Sans", sans-serif;
+
+$shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+$border: 1px solid #f7a84e;
+
+@mixin grid($val) {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 3rem;
+}

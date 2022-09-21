@@ -1,0 +1,164 @@
+.about {
+  padding: 6rem 0;
+
+  .about-container {
+    width: 100%;
+    display: flex;
+    gap: 6rem;
+    align-items: flex-start;
+
+    @include media-768 {
+      flex-direction: column;
+    }
+
+    .about-image {
+      position: relative;
+      width: 60%;
+
+      box-shadow: 0px 5px 10px #00000029;
+      border: 0.8rem solid #ffffff;
+      border-radius: 1rem;
+
+      @include media-1200 {
+        width: 55%;
+      }
+
+      @include media-1040 {
+        width: 50%;
+      }
+
+      @include media-768 {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 1rem;
+      }
+
+      .play {
+        position: absolute;
+        cursor: pointer;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .about-content {
+      position: relative;
+      z-index: 22;
+      width: 40%;
+      // margin-left: 8rem;
+      padding: 1rem;
+
+      @include media-1200 {
+        width: 45%;
+      }
+
+      @include media-1040 {
+        width: 50%;
+      }
+
+      @include media-768 {
+        width: 100%;
+        text-align: center;
+        // margin-left: 0;
+      }
+      h2 {
+        font: normal normal 600 16px/20px $font-family;
+        color: $color-secondary;
+        font-weight: 700;
+        text-align: left;
+      }
+
+      h3 {
+        font: normal normal bold 36px/44px $font-family;
+        margin-bottom: 1.5rem;
+        text-align: left;
+
+        @include media-1040 {
+          font: normal normal bold 30px/44px $font-family;
+        }
+      }
+
+      a {
+        display: inline-block;
+        background: #ffffff;
+        border: 1px solid #d43442;
+        border-radius: 3rem;
+        padding: 1rem 3rem;
+        text-align: center;
+        font: normal normal bold 18px/28px $font-family;
+        color: $color-primary;
+        transition: all ease-in 0.3s;
+
+        @include media-1040 {
+          font-size: 1.5rem;
+          padding: 1rem 2rem;
+        }
+
+        @include media-768 {
+          padding: 0.8rem 1.5rem;
+        }
+
+        &:hover {
+          background-color: $color-secondary;
+
+          color: $color-primary;
+          border: 1px solid $color-secondary;
+          // opacity: 0.7;
+        }
+      }
+      p {
+        font: normal normal normal 15px/23px $font-family;
+        font-weight: 500;
+        margin-bottom: 3rem;
+        text-align: justify;
+
+        @include media-1040 {
+          font-size: 1.4rem;
+        }
+      }
+
+      .icon {
+        position: absolute;
+        width: 130%;
+        height: 130%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.pos {
+  position: relative;
+  z-index: 10;
+  .dot {
+    position: absolute;
+
+    left: 48%;
+    bottom: 0;
+    margin-bottom: -5rem;
+    z-index: -1;
+
+    @include media-1200 {
+      left: 42%;
+    }
+
+    @include media-1040 {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}

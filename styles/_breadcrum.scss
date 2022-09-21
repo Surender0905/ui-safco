@@ -1,0 +1,101 @@
+.breadcrum {
+  margin-top: 10rem;
+  width: 100%;
+  height: 65vh;
+
+  @include media-901 {
+    height: 50vh;
+  }
+
+  @include media-475 {
+    height: 50vh;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    .swiper-wrapper {
+      height: 100%;
+      width: 100%;
+
+      .swiper-slide {
+        width: 100% !important;
+        height: 100%;
+        background-size: cover !important;
+
+        .banner-content {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          h2 {
+            font: normal normal 800 50px/58px $font-family;
+            color: $white;
+
+            span {
+              color: $color-primary;
+            }
+
+            @include media-1040 {
+              font: normal normal 800 45px/50px $font-family;
+            }
+
+            @include media-901 {
+              font: normal normal 700 30px/35px $font-family;
+            }
+            @include media-475 {
+              font-size: 2.5rem;
+              line-height: 1.6;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-left: -55rem;
+  .swiper-pagination-bullet {
+    background-color: #fff;
+    height: 1.2rem;
+    width: 1.2rem;
+    opacity: 1;
+  }
+
+  @include media-1200 {
+    margin-left: -45rem;
+  }
+
+  @include media-1150 {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.212);
+  }
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+}
+
+/////////////////////scroll section/////////////////////////////
